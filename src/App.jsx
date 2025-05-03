@@ -1,7 +1,7 @@
 import { Routes, Route, useNavigate } from "react-router-dom";
 import Home from "./views/Home";
 import Login from "./views/Login";
-import GraveYard from "./components/GraveYard/GraveYard";
+import Admin from "./components/Admin/Admin";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useContext, useEffect } from "react";
@@ -15,7 +15,7 @@ function App() {
 
   useEffect(() => {
     if (user?.email === "admin@admin.com") {
-      navigate("/graveyard");
+      navigate("/admin");
     } else {
       navigate("/");
     }
@@ -27,7 +27,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/graveyard" element={<GraveYard />} />
+        <Route path="/admin" element={<Admin />} />
       </Routes>
     </>
   );

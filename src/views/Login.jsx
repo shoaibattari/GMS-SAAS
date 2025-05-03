@@ -19,7 +19,7 @@ const Login = () => {
     const result = login(data);
     if (result?.success) {
       toast.success("Admin Login successfully!");
-      navigate("/graveyard");
+      navigate("/admin");
     }else{
       toast.error(result?.message)
     }

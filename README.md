@@ -73,4 +73,4 @@ src/
 
 🔑 Admin Credentials (for testing)
 Email: admin@admin.com
-Password: 
+Password: admin

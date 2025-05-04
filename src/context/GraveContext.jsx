@@ -1,10 +1,10 @@
 import { createContext, useState } from "react";
-import { dummyGraves } from "../assets/helpers.js";
+import { graveData } from "../assets/constant.js";
 
 const GraveContext = createContext();
 
 export const GraveProvider = ({ children }) => {
-  const [graves, setGraves] = useState(dummyGraves);
+  const [graves, setGraves] = useState(graveData);
   console.log("graves all, ", graves);
   // ✅ Add new grave
   const addGrave = (grave) => {

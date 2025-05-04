@@ -3,7 +3,7 @@ import Button from "../common/Button";
 import { useNavigate } from "react-router";
 
 const Hero = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   return (
     <section
       style={{
@@ -22,8 +22,17 @@ const Hero = () => {
           visitor or an admin, access organized data in seconds.
         </p>
         <div className="flex items-center justify-between gap-6 py-6">
-          <Button onClick={()=> navigate("/guest")} label={"Guest"} />
-          <Button onClick={()=> navigate("/login")} fill={true} label={"Admin"} />
+          <Button
+            onClick={() => navigate("/guest")}
+            label={"Guest"}
+            className={"!py-6 text-h4 font-semibold"}
+          />
+          <Button
+            onClick={() => navigate("/login")}
+            fill={true}
+            className={"!py-6 text-h4 font-semibold"}
+            label={"Admin"}
+          />
         </div>
       </div>
     </section>

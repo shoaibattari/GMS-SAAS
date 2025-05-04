@@ -54,7 +54,7 @@ const GraveUserView = () => {
               className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-200 overflow-hidden"
             >
               <div className="bg-gradient-to-br from-red-600 to-red-400 p-4">
-                <h3 className="text-2xl font-bold text-white truncate">
+                <h3 className="text-2xl font-bold text-white truncate text-wrap h-16">
                   {grave.Name}
                 </h3>
               </div>
@@ -79,7 +79,7 @@ const GraveUserView = () => {
             </div>
           ))
         ) : (
-          <p className="col-span-full text-center text-gray-500">
+          <p className="col-span-full text-center text-p text-white">
             No records found.
           </p>
         )}
@@ -87,11 +87,13 @@ const GraveUserView = () => {
       <div className="flex justify-center items-center gap-4 mt-6">
         <Button
           label="Graveyard Section "
+          className={"!py-6 text-h4 font-semibold"}
           onClick={() => navigate("/guest/grave")}
           fill
         />
         <Button
           label="Khundi Section"
+          className={"!py-6 text-h4 font-semibold"}
           onClick={() => navigate("/guest/khundi")}
         />
       </div>

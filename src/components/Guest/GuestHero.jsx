@@ -20,7 +20,7 @@ const GuestHero = () => {
           This system helps you easily locate loved ones.
         </p>
       </div>
-      <div className="mt-6 flex justify-center">
+      <div className="mt-6 flex justify-center w-[80%]">
         <GraveUserView />
       </div>
 

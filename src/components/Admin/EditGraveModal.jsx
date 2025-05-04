@@ -5,6 +5,7 @@ import Button from "../common/Button";
 import GraveContext from "../../context/GraveContext";
 import { GoXCircle } from "react-icons/go";
 import { toast } from "react-toastify";
+import { graveyardOptions, khundiOptions } from "../../assets/constant";
 
 const EditGraveModal = ({ grave, onClose }) => {
   const { editGrave } = useContext(GraveContext);
@@ -32,7 +33,7 @@ const EditGraveModal = ({ grave, onClose }) => {
   const currentDate = new Date().toISOString().split("T")[0]; // Get today's date in yyyy-mm-dd format
 
   return (
-    <div className="fixed inset-0 bg-black/40 z-50 flex items-center justify-center">
+    <div className="fixed inset-0 bg-black/40 z-50 flex items-center justify-center px-2">
       <div
         style={{
           background:
@@ -59,11 +60,7 @@ const EditGraveModal = ({ grave, onClose }) => {
             label="Graveyard"
             name="Graveyard"
             type="select" // dropdown
-            options={[
-              { value: "hubriver1", label: "Hub River 1" },
-              { value: "hubriver2", label: "Hub River 2" },
-              { value: "hubriver3", label: "Hub River 3" },
-            ]}
+            options={graveyardOptions}
             placeholder="Enter Graveyard Name"
             register={register}
             rules={{ required: "Graveyard name is required" }}
@@ -82,11 +79,7 @@ const EditGraveModal = ({ grave, onClose }) => {
             name="KHUNDI"
             placeholder="Enter Khundi"
             type="select"
-            options={[
-              { value: "jakhura", label: "Jakhura" },
-              { value: "sindhi", label: "Sindhi" },
-              { value: "punjabi", label: "Punjabi" },
-            ]}
+            options={khundiOptions}
             register={register}
             rules={{ required: "Khundi is required" }}
             error={errors.KHUNDI}

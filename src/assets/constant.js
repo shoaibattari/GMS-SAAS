@@ -10,7 +10,7 @@ export const graveData = [
   {
     id: "602",
     GraveNo: "602",
-    Graveyard: "hubriver1",
+    Graveyard: "hubriver2",
     Name: "FATIMA BINTE ISMAIL",
     KHUNDI: "VAYANI",
     DOD: "18-01-89",
@@ -18,7 +18,7 @@ export const graveData = [
   {
     id: "603",
     GraveNo: "603",
-    Graveyard: "hubriver1",
+    Graveyard: "hubriver3",
     Name: "YOUSUF ABDUL QADIR",
     KHUNDI: "MARKATIYA",
     DOD: "22-01-89",
@@ -34,7 +34,7 @@ export const graveData = [
   {
     id: "605",
     GraveNo: "605",
-    Graveyard: "hubriver1",
+    Graveyard: "hubriver2",
     Name: "MUHAMMAD TAHIR S/O ABDUL LATIF",
     KHUNDI: "TOBERIA",
     DOD: "30-01-89",
@@ -42,7 +42,7 @@ export const graveData = [
   {
     id: "606",
     GraveNo: "606",
-    Graveyard: "hubriver1",
+    Graveyard: "hubriver3",
     Name: "KHADIJA BINTE USMAN",
     KHUNDI: "PANJWANI",
     DOD: "3-02-89",
@@ -58,7 +58,7 @@ export const graveData = [
   {
     id: "608",
     GraveNo: "608",
-    Graveyard: "hubriver1",
+    Graveyard: "hubriver2",
     Name: "RUQIYA W/O ABDUL GHANI",
     KHUNDI: "GABA",
     DOD: "12-02-89",
@@ -66,7 +66,7 @@ export const graveData = [
   {
     id: "609",
     GraveNo: "609",
-    Graveyard: "hubriver1",
+    Graveyard: "hubriver3",
     Name: "HAJI ISMAIL S/O HAJI YOUSUF",
     KHUNDI: "GHAZIANI",
     DOD: "15-02-89",
@@ -82,7 +82,7 @@ export const graveData = [
   {
     id: "611",
     GraveNo: "611",
-    Graveyard: "hubriver1",
+    Graveyard: "hubriver2",
     Name: "ABDULLAH S/O MUHAMMAD ARIF",
     KHUNDI: "MANGRORIA",
     DOD: "22-02-89",
@@ -90,7 +90,7 @@ export const graveData = [
   {
     id: "612",
     GraveNo: "612",
-    Graveyard: "hubriver1",
+    Graveyard: "hubriver3",
     Name: "HAWA BINTE JUMMA",
     KHUNDI: "KATH",
     DOD: "25-02-89",
@@ -106,7 +106,7 @@ export const graveData = [
   {
     id: "614",
     GraveNo: "614",
-    Graveyard: "hubriver1",
+    Graveyard: "hubriver2",
     Name: "SAKINA W/O ABDUL KARIM",
     KHUNDI: "BARAI",
     DOD: "5-03-89",
@@ -114,7 +114,7 @@ export const graveData = [
   {
     id: "615",
     GraveNo: "615",
-    Graveyard: "hubriver1",
+    Graveyard: "hubriver3",
     Name: "MUHAMMAD SOHAIL S/O ISHAQ",
     KHUNDI: "DARIYA",
     DOD: "8-03-89",
@@ -138,7 +138,7 @@ export const graveData = [
   {
     id: "618",
     GraveNo: "618",
-    Graveyard: "hubriver1",
+    Graveyard: "hubriver2",
     Name: "HAJRA BINTE TAR MUHAMMAD",
     KHUNDI: "POPATPOTRA",
     DOD: "18-03-89",
@@ -154,7 +154,7 @@ export const graveData = [
   {
     id: "620",
     GraveNo: "620",
-    Graveyard: "hubriver1",
+    Graveyard: "hubriver3",
     Name: "BIBI KHADIJA W/O HAJI UMAR",
     KHUNDI: "MOHAMMADI",
     DOD: "25-03-89",
@@ -170,7 +170,7 @@ export const graveData = [
   {
     id: "622",
     GraveNo: "622",
-    Graveyard: "hubriver1",
+    Graveyard: "hubriver3",
     Name: "AMIR S/O HAJI HASHIM",
     KHUNDI: "ESSANI",
     DOD: "5-04-89",
@@ -178,7 +178,7 @@ export const graveData = [
   {
     id: "623",
     GraveNo: "623",
-    Graveyard: "hubriver1",
+    Graveyard: "hubriver3",
     Name: "FATIMA BINTE ABDUL RAZZAQ",
     KHUNDI: "DADWALA",
     DOD: "8-04-89",
@@ -194,7 +194,7 @@ export const graveData = [
   {
     id: "625",
     GraveNo: "625",
-    Graveyard: "hubriver1",
+    Graveyard: "hubriver2",
     Name: "SAADIA BINTE HAJI USMAN",
     KHUNDI: "JIWANI",
     DOD: "15-04-89",
@@ -210,7 +210,7 @@ export const graveData = [
   {
     id: "627",
     GraveNo: "627",
-    Graveyard: "hubriver1",
+    Graveyard: "hubriver2",
     Name: "KHALidA BINTE HAJI ADAM",
     KHUNDI: "PASTA",
     DOD: "22-04-89",
@@ -234,9 +234,48 @@ export const graveData = [
   {
     id: "630",
     GraveNo: "630",
-    Graveyard: "hubriver1",
+    Graveyard: "hubriver2",
     Name: "ABDUL MAJEED S/O HAJI TAR MUHAMMAD",
     KHUNDI: "KHOSA",
     DOD: "5-05-89",
   },
+];
+
+export const khundiOptions = [
+  { value: "GANATRA", label: "GANATRA" },
+  { value: "VAYANI", label: "VAYANI" },
+  { value: "MARKATIYA", label: "MARKATIYA" },
+  { value: "SURIYA", label: "SURIYA" },
+  { value: "TOBERIA", label: "TOBERIA" },
+  { value: "PANJWANI", label: "PANJWANI" },
+  { value: "KARAR", label: "KARAR" },
+  { value: "GABA", label: "GABA" },
+  { value: "GHAZIANI", label: "GHAZIANI" },
+  { value: "JAFRANI", label: "JAFRANI" },
+  { value: "MANGRORIA", label: "MANGRORIA" },
+  { value: "KATH", label: "KATH" },
+  { value: "MOORAD", label: "MOORAD" },
+  { value: "BARAI", label: "BARAI" },
+  { value: "DARIYA", label: "DARIYA" },
+  { value: "MAMDANI", label: "MAMDANI" },
+  { value: "LADHANI", label: "LADHANI" },
+  { value: "POPATPOTRA", label: "POPATPOTRA" },
+  { value: "GABRANI", label: "GABRANI" },
+  { value: "MOHAMMADI", label: "MOHAMMADI" },
+  { value: "ASWANI", label: "ASWANI" },
+  { value: "ESSANI", label: "ESSANI" },
+  { value: "DADWALA", label: "DADWALA" },
+  { value: "GAGAI", label: "GAGAI" },
+  { value: "JIWANI", label: "JIWANI" },
+  { value: "KALANI", label: "KALANI" },
+  { value: "PASTA", label: "PASTA" },
+  { value: "DARBAR", label: "DARBAR" },
+  { value: "MULARA", label: "MULARA" },
+  { value: "KHOSA", label: "KHOSA" },
+];
+
+export const graveyardOptions = [
+  { value: "hubriver1", label: "Hub River 1" },
+  { value: "hubriver2", label: "Hub River 2" },
+  { value: "hubriver3", label: "Hub River 3" },
 ];

@@ -1,11 +1,11 @@
 import { Routes, Route, useNavigate } from "react-router-dom";
 import Home from "./views/Home";
 import Login from "./views/Login";
-import Guest from "./views/Guest"
+import Guest from "./views/Guest";
 import Admin from "./components/Admin/Admin";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import UserContext from "./context/UserContext";
 import Category from "./components/Guest/Category";
 import SubCategory from "./components/Guest/SubCategory";
@@ -32,9 +32,6 @@ function App() {
         <Route path="/guest" element={<Guest />} />
         <Route path="/guest/:category" element={<Category />} />
         <Route path="/guest/:category/:subCategory" element={<SubCategory />} />
-
-
-
       </Routes>
     </>
   );

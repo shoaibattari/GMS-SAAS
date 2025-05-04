@@ -12,8 +12,8 @@ const Hero = () => {
       }}
       className="relative py-20 text-center flex flex-col items-center justify-center h-screen"
     >
-      <div className="container mx-auto px-6 w-[60%] ">
-        <h1 className="text-6xl  text-white mb-4 font-medium ">
+      <div className="container mx-auto px-6 md:w-[60%] ">
+        <h1 className="text-p leading-7 md:leading-14 md:text-6xl  text-white mb-4 font-medium ">
           WellCome To <span className="gradient-text">GraveYard</span>{" "}
           Management System
         </h1>
@@ -25,12 +25,12 @@ const Hero = () => {
           <Button
             onClick={() => navigate("/guest")}
             label={"Guest"}
-            className={"!py-6 text-h4 font-semibold"}
+            className={"md:!py-6 md:text-h4 font-semibold"}
           />
           <Button
             onClick={() => navigate("/login")}
             fill={true}
-            className={"!py-6 text-h4 font-semibold"}
+            className={"md:!py-6 md:text-h4 font-semibold"}
             label={"Admin"}
           />
         </div>

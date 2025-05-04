@@ -10,8 +10,8 @@ const GuestHero = () => {
       }}
       className="py-20 text-center flex flex-col items-center justify-center"
     >
-      <div className="container mx-auto px-6 w-[50%] ">
-        <h1 className="text-6xl  text-white mb-4 font-medium ">
+      <div className="container mx-auto px-6 md:w-[50%] ">
+        <h1 className="text-p leading-7 md:leading-14 md:text-6xl  text-white mb-4 font-medium ">
           WellCome To
           <span className="gradient-text"> GraveYard Record Portal</span>
         </h1>

@@ -13,7 +13,7 @@ const SearchBar = ({
   khundiOptions,
 }) => {
   return (
-    <div className="flex justify-between items-center gap-4 bg-white shadow p-4 rounded-lg my-6">
+    <div className="flex flex-col md:flex-row justify-between items-center gap-4 bg-white shadow p-4 rounded-lg my-6">
       <input
         type="text"
         placeholder="Search by name or grave no."

@@ -1,41 +1,44 @@
 import React, { useContext, useMemo, useState } from "react";
 import { useLocation, useParams } from "react-router-dom";
-import UserViewHero from "./UserViewHero";
 import SearchBar from "../common/SearchBar";
 import GraveContext from "../../context/GraveContext";
+import { graveyardOptions, khundiOptions } from "../../assets/constant";
 
 const SubCategory = () => {
   const { subCategory } = useParams();
   const { pathname } = useLocation();
-  const { graves } = useContext(GraveContext); // Access graves from context
-
-  const graveyardOptions = [
-    { value: "hubriver1", label: "Hub River 1" },
-    { value: "hubriver2", label: "Hub River 2" },
-    { value: "hubriver3", label: "Hub River 3" },
-  ];
-
-  const khundiOptions = [
-    { value: "jakhura", label: "Jakhura" },
-    { value: "sindhi", label: "Sindhi" },
-    { value: "punjabi", label: "Punjabi" },
-  ];
+  const { graves } = useContext(GraveContext);
 
   const [search, setSearch] = useState("");
   const [graveyard, setGraveyard] = useState(null);
   const [khundi, setKhundi] = useState(null);
 
+  // Determine type based on pathname
+  const isGravePath = pathname.includes("/grave/");
+  const isKhundiPath = pathname.includes("/khundi/");
+
   const displayGraves = useMemo(() => {
     return graves.filter((grave) => {
+      const matchesSubCategory = isGravePath
+        ? grave.Graveyard === subCategory
+        : isKhundiPath
+        ? grave.KHUNDI === subCategory
+        : true;
+
       const matchesSearch = search
         ? grave.Name.toLowerCase().includes(search.toLowerCase())
         : true;
       const matchesGraveyard = graveyard ? grave.Graveyard === graveyard : true;
       const matchesKhundi = khundi ? grave.KHUNDI === khundi : true;
 
-      return matchesSearch && matchesGraveyard && matchesKhundi;
+      return (
+        matchesSubCategory &&
+        matchesSearch &&
+        matchesGraveyard &&
+        matchesKhundi
+      );
     });
-  }, [search, graveyard, khundi, graves]);
+  }, [subCategory, isGravePath, isKhundiPath, search, graveyard, khundi, graves]);
 
   return (
     <div
@@ -45,9 +48,9 @@ const SubCategory = () => {
       }}
       className="py-20 text-center flex flex-col items-center justify-center"
     >
-      <div className="container mx-auto px-6 w-[50%] ">
-        <h1 className="text-6xl  text-white mb-4 font-medium ">
-          WellCome To
+      <div className="container mx-auto px-6 md:w-[50%] ">
+        <h1 className="text-p leading-7 md:leading-14 md:text-6xl text-white mb-4 font-medium">
+          Welcome To
           <span className="gradient-text"> {subCategory} Record Portal</span>
         </h1>
         <p className="text-lg text-white text-balance font-medium">
@@ -55,11 +58,11 @@ const SubCategory = () => {
           This system helps you easily locate loved ones.
         </p>
       </div>
-      {/* <UserViewHero section={subCategory} />; */}
+
       <div className="container mx-auto px-4 w-[80%]">
         <SearchBar
-          graveShow={pathname.startsWith("/guest/khundi")}
-          khundiShow={pathname.startsWith("/guest/grave")}
+          graveShow={isGravePath}
+          khundiShow={isKhundiPath}
           search={search}
           setSearch={setSearch}
           graveyard={graveyard}
@@ -96,7 +99,7 @@ const SubCategory = () => {
                     <span>{grave.KHUNDI}</span>
                   </p>
                   <p className="flex">
-                    <span className="font-semibold w-24">D.O.D:</span>
+                    <span className="font-semibold w-24">Death Date:</span>
                     <span>{grave.DOD}</span>
                   </p>
                 </div>

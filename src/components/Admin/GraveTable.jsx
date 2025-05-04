@@ -56,14 +56,14 @@ const GraveTable = () => {
               paginatedGraves.map((grave) => (
                 <tr
                   key={grave?.id}
-                  className="border-t cursor-pointer hover:bg-gray-100"
+                  className="border-t cursor-pointer hover:bg-gray-100 overflow-y-scroll"
                 >
-                  <td className="p-3">{grave?.GraveNo}</td>
-                  <td className="p-3">{grave?.Graveyard}</td>
-                  <td className="p-3">{grave?.Name}</td>
-                  <td className="p-3">{grave?.KHUNDI}</td>
-                  <td className="p-3">{grave?.DOD}</td>
-                  <td className="p-3 flex gap-4 justify-center">
+                  <td className="text-xs md:text-sm p-3">{grave?.GraveNo}</td>
+                  <td className="text-xs md:text-sm p-3">{grave?.Graveyard}</td>
+                  <td className="text-xs md:text-sm p-3">{grave?.Name}</td>
+                  <td className="text-xs md:text-sm p-3">{grave?.KHUNDI}</td>
+                  <td className="text-xs md:text-sm p-3 text-nowrap">{grave?.DOD}</td>
+                  <td className="text-xs md:text-sm p-3 flex gap-4 justify-center">
                     <button
                       onClick={() => setEditGrave(grave)}
                       className="text-blue-500 hover:text-blue-700 cursor-pointer"

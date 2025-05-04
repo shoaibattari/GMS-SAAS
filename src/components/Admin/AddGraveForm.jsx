@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import Input from "../common/Input"; // adjust the path to your Input component
 import Button from "../common/Button";
 import GraveContext from "../../context/GraveContext";
+import { graveyardOptions, khundiOptions } from "../../assets/constant";
 
 const AddGraveForm = ({ setShowForm }) => {
   const { addGrave } = useContext(GraveContext);
@@ -31,7 +32,7 @@ const AddGraveForm = ({ setShowForm }) => {
             "radial-gradient(61.05% 50.86% at 50% 46.33%, #F15050 0%, #850C0C 100%)",
         }}
         onSubmit={handleSubmit(onSubmit)}
-        className=" space-y-4 mx-auto bg-gray-200 p-5 px-12 rounded-t-2xl mr-2"
+        className=" space-y-4 md:mx-auto bg-gray-200 p-5 md:px-12 rounded-t-2xl mr-2"
       >
         <Input
           type="number"
@@ -47,11 +48,7 @@ const AddGraveForm = ({ setShowForm }) => {
           label="Graveyard"
           name="Graveyard"
           type="select" // dropdown
-          options={[
-            { value: "hubriver1", label: "Hub River 1" },
-            { value: "hubriver2", label: "Hub River 2" },
-            { value: "hubriver3", label: "Hub River 3" },
-          ]}
+          options={graveyardOptions}
           register={register}
           rules={{ required: "Graveyard name is required" }}
           error={errors.Graveyard}
@@ -69,11 +66,7 @@ const AddGraveForm = ({ setShowForm }) => {
           label="Khundi"
           name="KHUNDI"
           type="select" // dropdown
-          options={[
-            { value: "jakhura", label: "Jakhura" },
-            { value: "sindhi", label: "Sindhi" },
-            { value: "punjabi", label: "Punjabi" },
-          ]}
+          options={khundiOptions}
           register={register}
           rules={{ required: "Khundi is required" }}
           error={errors.KHUNDI}

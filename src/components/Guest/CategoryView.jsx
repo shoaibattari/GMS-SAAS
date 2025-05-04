@@ -1,25 +1,10 @@
 import React, { useState, useMemo, useContext } from "react";
-import UserViewHero from "./UserViewHero";
 import { Link } from "react-router-dom";
+import { graveyardOptions, khundiOptions } from "../../assets/constant";
 
 const CategoryView = ({ category }) => {
-  const graveyardOptions = useMemo(
-    () => [
-      { value: "hubriver1", label: "Hub River 1" },
-      { value: "hubriver2", label: "Hub River 2" },
-      { value: "hubriver3", label: "Hub River 3" },
-    ],
-    []
-  );
-
-  const khundiOptions = useMemo(
-    () => [
-      { value: "jakhura", label: "Jakhura" },
-      { value: "sindhi", label: "Sindhi" },
-      { value: "punjabi", label: "Punjabi" },
-    ],
-    []
-  );
+  
+ 
 
   return (
     <div
@@ -29,8 +14,8 @@ const CategoryView = ({ category }) => {
       }}
       className="py-20 text-center flex flex-col items-center justify-center"
     >
-      <div className="container mx-auto px-6 w-[50%] ">
-        <h1 className="text-6xl  text-white mb-4 font-medium ">
+      <div className="container mx-auto px-6 md:w-[50%] ">
+        <h1 className="text-p leading-7 md:leading-14 md:text-6xl  text-white mb-4 font-medium ">
           WellCome To
           <span className="gradient-text"> {category} Record Portal</span>
         </h1>
@@ -47,9 +32,9 @@ const CategoryView = ({ category }) => {
               <Link
                 to={`${grave?.value}`}
                 key={grave.value}
-                className="bg-gradient-to-br from-red-600 to-red-400 p-4 py-12 rounded-3xl"
+                className="bg-gradient-to-br from-red-600 to-red-400 p-4 md:py-12 rounded-3xl"
               >
-                <h3 className="text-h4 font-bold text-white text-center">
+                <h3 className="text-p md:text-h4 font-bold text-white text-center">
                   {grave.label}
                 </h3>
               </Link>
@@ -61,9 +46,9 @@ const CategoryView = ({ category }) => {
               <Link
                 to={`${khundi?.value}`}
                 key={khundi.value}
-                className="bg-gradient-to-br from-red-600 to-red-400 p-4 py-12 rounded-3xl"
+                className="bg-gradient-to-br from-red-600 to-red-400 p-4 md:py-12 rounded-3xl"
               >
-                <h3 className="text-h4 font-bold text-white text-center">
+                <h3 className="text-p md:text-h4 font-bold text-white text-center">
                   {khundi.label}
                 </h3>
               </Link>

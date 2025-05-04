@@ -3,8 +3,17 @@ import { createContext, useState } from "react";
 const GraveContext = createContext();
 
 export const GraveProvider = ({ children }) => {
-  const [graves, setGraves] = useState([]);
+  const dummyGraves = Array.from({ length: 20 }, (_, i) => ({
+    id: Date.now() + i,
+    GraveNo: `${i + 1}`,
+    Graveyard: `hubriver${(i % 3) + 1}`,
+    Name: `Person ${i + 1} W/O Someone`,
+    KHUNDI: `Location ${(i % 5) + 1}`,
+    DOD: `2025-05-${((i % 28) + 1).toString().padStart(2, "0")}`,
+  }));
 
+  const [graves, setGraves] = useState(dummyGraves);
+  console.log("graves all, ", graves);
   // ✅ Add new grave
   const addGrave = (grave) => {
     const newGrave = { id: Date.now(), ...grave };
@@ -12,10 +21,10 @@ export const GraveProvider = ({ children }) => {
   };
 
   // ✏️ Edit grave by ID
-  const editGrave = (id, updatedGrave) => {
-    setGraves((prev) =>
-      prev.map((grave) =>
-        grave.id === id ? { ...grave, ...updatedGrave } : grave
+  const editGrave = (updatedGrave) => {
+    setGraves((prevGraves) =>
+      prevGraves.map((grave) =>
+        grave.id === updatedGrave.id ? updatedGrave : grave
       )
     );
   };

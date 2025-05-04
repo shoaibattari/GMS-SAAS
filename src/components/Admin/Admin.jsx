@@ -3,6 +3,7 @@ import { useNavigate } from "react-router";
 import UserContext from "../../context/UserContext";
 import Button from "../common/Button";
 import AddGraveForm from "./AddGraveForm";
+import GraveTable from "./GraveTable";
 
 const Admin = () => {
   const [showForm, setShowForm] = useState(false);
@@ -28,18 +29,22 @@ const Admin = () => {
       </div>
 
       {/* Main content area */}
-      <div className="flex w-full h-full">
-        <div className="w-full flex-2 bg-white">
-          <Button
-            primary
-            label="Add Grave"
-            fill
-            className="w-full mb-4 py-6 text-3xl hover:!bg-yellow-600 hover:!text-white"
+      <div className="flex w-full h-full gap-4">
+        <div className="w-full h-full flex-2 pt-4">
+          <div
+            className="w-fit px-12  mb-4 py-6 text-3xl cursor-pointer bg-gray-400 text-center rounded-xl ml-3 hover:!bg-yellow-600 hover:!text-white"
             onClick={() => setShowForm(true)}
-          />
+          >
+            Add Grave
+          </div>
         </div>
+
         <div className="w-full flex-8">
-          {showForm && <AddGraveForm setShowForm={setShowForm} />}
+          {showForm ? (
+            <AddGraveForm setShowForm={setShowForm} />
+          ) : (
+            <GraveTable />
+          )}
         </div>
       </div>
     </div>

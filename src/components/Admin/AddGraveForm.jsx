@@ -29,7 +29,7 @@ const AddGraveForm = ({ setShowForm }) => {
             "radial-gradient(61.05% 50.86% at 50% 46.33%, #F15050 0%, #850C0C 100%)",
         }}
         onSubmit={handleSubmit(onSubmit)}
-        className=" space-y-4 mx-auto bg-gary-200 p-5 px-12"
+        className=" space-y-4 mx-auto bg-gray-200 p-5 px-12 rounded-t-2xl mr-2"
       >
         <Input
           type="number"

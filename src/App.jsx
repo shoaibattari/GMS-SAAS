@@ -11,8 +11,6 @@ function App() {
   const { user } = useContext(UserContext);
   const navigate = useNavigate();
 
-
-
   useEffect(() => {
     if (user?.email === "admin@admin.com") {
       navigate("/admin");

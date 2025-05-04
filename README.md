@@ -1,5 +1,5 @@
 # Grave Management System (GMS)
-
+"C:\Users\DELL\Downloads\screencapture-gms-saas-vercel-app-2025-05-04-20_38_23.png"
 A responsive web application built using **React.js** to manage graveyard records such as graves, khundis, and related data. Admins can log in to manage records, and guests can view categorized data.
 
 📘 Description

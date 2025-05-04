@@ -24,8 +24,9 @@ const GraveTable = () => {
   };
 
   const paginatedGraves = useMemo(() => {
+    const reversed = [...graves].reverse();
     const start = (currentPage - 1) * pageSize;
-    return graves.slice(start, start + pageSize);
+    return reversed.slice(start, start + pageSize);
   }, [graves, pageSize, currentPage]);
 
   const totalPages = Math.ceil(graves.length / pageSize);

@@ -1,17 +1,9 @@
 import { createContext, useState } from "react";
+import { dummyGraves } from "../assets/helpers.js";
 
 const GraveContext = createContext();
 
 export const GraveProvider = ({ children }) => {
-  const dummyGraves = Array.from({ length: 20 }, (_, i) => ({
-    id: Date.now() + i,
-    GraveNo: `${i + 1}`,
-    Graveyard: `hubriver${(i % 3) + 1}`,
-    Name: `Person ${i + 1} W/O Someone`,
-    KHUNDI: `Location ${(i % 5) + 1}`,
-    DOD: `2025-05-${((i % 28) + 1).toString().padStart(2, "0")}`,
-  }));
-
   const [graves, setGraves] = useState(dummyGraves);
   console.log("graves all, ", graves);
   // ✅ Add new grave
@@ -29,7 +21,7 @@ export const GraveProvider = ({ children }) => {
     );
   };
 
-  // ❌ Delete grave by ID
+  //  Delete grave by ID
   const deleteGrave = (id) => {
     setGraves((prev) => prev.filter((grave) => grave.id !== id));
   };

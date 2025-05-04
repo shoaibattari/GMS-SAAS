@@ -21,6 +21,8 @@ const AddGraveForm = ({ setShowForm }) => {
     setShowForm(false);
   };
 
+  const currentDate = new Date().toISOString().split("T")[0]; // Get today's date in yyyy-mm-dd format
+
   return (
     <>
       <form
@@ -44,12 +46,16 @@ const AddGraveForm = ({ setShowForm }) => {
         <Input
           label="Graveyard"
           name="Graveyard"
-          placeholder="Enter Graveyard Name"
+          type="select" // dropdown
+          options={[
+            { value: "hubriver1", label: "Hub River 1" },
+            { value: "hubriver2", label: "Hub River 2" },
+            { value: "hubriver3", label: "Hub River 3" },
+          ]}
           register={register}
           rules={{ required: "Graveyard name is required" }}
           error={errors.Graveyard}
         />
-
         <Input
           label="Name"
           name="Name"
@@ -62,7 +68,12 @@ const AddGraveForm = ({ setShowForm }) => {
         <Input
           label="Khundi"
           name="KHUNDI"
-          placeholder="Enter Khundi"
+          type="select" // dropdown
+          options={[
+            { value: "jakhura", label: "Jakhura" },
+            { value: "sindhi", label: "Sindhi" },
+            { value: "punjabi", label: "Punjabi" },
+          ]}
           register={register}
           rules={{ required: "Khundi is required" }}
           error={errors.KHUNDI}
@@ -74,7 +85,13 @@ const AddGraveForm = ({ setShowForm }) => {
           name="DOD"
           placeholder="DD-MM-YY"
           register={register}
-          rules={{ required: "Date of Death is required" }}
+          rules={{
+            required: "Date of Death is required",
+            max: {
+              value: currentDate,
+              message: "Date of Death cannot be in the future",
+            },
+          }}
           error={errors.DOD}
         />
       </form>

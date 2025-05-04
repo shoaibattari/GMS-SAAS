@@ -29,6 +29,7 @@ const EditGraveModal = ({ grave, onClose }) => {
     editGrave({ id: grave.id, ...data });
     onClose();
   };
+  const currentDate = new Date().toISOString().split("T")[0]; // Get today's date in yyyy-mm-dd format
 
   return (
     <div className="fixed inset-0 bg-black/40 z-50 flex items-center justify-center">
@@ -57,6 +58,12 @@ const EditGraveModal = ({ grave, onClose }) => {
           <Input
             label="Graveyard"
             name="Graveyard"
+            type="select" // dropdown
+            options={[
+              { value: "hubriver1", label: "Hub River 1" },
+              { value: "hubriver2", label: "Hub River 2" },
+              { value: "hubriver3", label: "Hub River 3" },
+            ]}
             placeholder="Enter Graveyard Name"
             register={register}
             rules={{ required: "Graveyard name is required" }}
@@ -74,6 +81,12 @@ const EditGraveModal = ({ grave, onClose }) => {
             label="Khundi"
             name="KHUNDI"
             placeholder="Enter Khundi"
+            type="select"
+            options={[
+              { value: "jakhura", label: "Jakhura" },
+              { value: "sindhi", label: "Sindhi" },
+              { value: "punjabi", label: "Punjabi" },
+            ]}
             register={register}
             rules={{ required: "Khundi is required" }}
             error={errors.KHUNDI}
@@ -84,7 +97,13 @@ const EditGraveModal = ({ grave, onClose }) => {
             name="DOD"
             placeholder="DD-MM-YY"
             register={register}
-            rules={{ required: "Date of Death is required" }}
+            rules={{
+              required: "Date of Death is required",
+              max: {
+                value: currentDate,
+                message: "Date of Death cannot be in the future",
+              },
+            }}
             error={errors.DOD}
           />
           <div className="flex justify-end gap-4 pt-4">

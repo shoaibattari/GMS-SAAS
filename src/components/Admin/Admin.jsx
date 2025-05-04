@@ -17,29 +17,29 @@ const Admin = () => {
   return (
     <div className="min-h-screen bg-gray-100">
       {/* Header with logout button */}
-      <div className="flex justify-between items-center p-4  ">
+      <div className="flex justify-between items-center p-4 px-24">
         <h1 className="text-h1 font-bold gradient-text">Admin Dashboard</h1>
-        <Button
-          danger
-          fill
-          className={"!w-fit px-12"}
-          label={"Logout"}
-          onClick={handleLogout}
-        />
+        <div className="flex justify-start items-center gap-4">
+          <Button
+            fill
+            className={"!w-fit px-24 hover:!bg-gray-400 hover:!text-white"}
+            label={"Add Grave"}
+            onClick={() => setShowForm(true)}
+          />
+
+          <Button
+            danger
+            fill
+            className={"!w-fit px-24"}
+            label={"Logout"}
+            onClick={handleLogout}
+          />
+        </div>
       </div>
 
       {/* Main content area */}
       <div className="flex w-full h-full gap-4">
-        <div className="w-full h-full flex-2 pt-4">
-          <div
-            className="w-fit px-12  mb-4 py-6 text-3xl cursor-pointer bg-gray-400 text-center rounded-xl ml-3 hover:!bg-yellow-600 hover:!text-white"
-            onClick={() => setShowForm(true)}
-          >
-            Add Grave
-          </div>
-        </div>
-
-        <div className="w-full flex-8">
+        <div className="w-full px-24">
           {showForm ? (
             <AddGraveForm setShowForm={setShowForm} />
           ) : (

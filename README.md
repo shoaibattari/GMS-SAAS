@@ -1,12 +1,76 @@
-# React + Vite
+# Grave Management System (GMS)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive web application built using **React.js** to manage graveyard records such as graves, khundis, and related data. Admins can log in to manage records, and guests can view categorized data.
 
-Currently, two official plugins are available:
+📘 Description
+Grave Management System (GMS) is a React.js-based web application built to streamline the record-keeping process for graveyards and khundi management. It serves both administrative users and the general public by offering structured data access, search functionality, and mobile responsiveness for ease of use in the field.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🎯 Project Goals
+Simplify the process of managing graveyard records digitally.
 
-## Expanding the ESLint configuration
+Provide role-based access: Admins can manage records; Guests can only view them.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Make the system user-friendly and accessible on all devices.
+
+Ensure real-time data update and clean UI with smooth transitions.
+
+💡 Inspiration
+This project was initiated to support community efforts in modernizing cemetery records, especially for local communities and organizations that still rely on manual entry. The system aims to be a digital-first solution that honors and preserves important historical and personal data.
+
+---
+
+## 🚀 Features
+
+- 🔐 Admin Login with role-based redirection
+- 🪦 View and manage graves and khundis
+- 📂 Category and Subcategory-based navigation
+- 📱 Fully responsive design (Mobile & Desktop)
+- 🎨 Styled with Tailwind CSS
+- 🍞 Toast notifications for feedback
+- 📦 React Router for client-side navigation
+
+---
+
+## 📁 Project Structure
+
+
+src/
+│
+├── components/
+│ ├── Admin/
+│ ├── common/
+│ ├── Guest/
+│ ├── Home/
+
+│
+├── context/
+│ └── UserContext.js
+│ └── GraveContext.js
+│
+├── views/
+│ ├── Home.js
+│ ├── Login.js
+│ └── Guest.js
+│
+├── App.jsx
+└── index.jsx   
+
+🛣️ Roadmap
+✅ Admin panel for CRUD operations
+✅ Guest interface for browsing records
+✅ Responsive navbar and layout
+✅ Toast notifications and modals
+🔜 Search and filter functionality
+
+
+## 🛠️ Tech Stack
+
+- **React JS**
+- **React Router DOM**
+- **React Icons**
+- **Tailwind CSS**
+- **React Toastify**
+
+🔑 Admin Credentials (for testing)
+Email: admin@admin.com
+Password: 

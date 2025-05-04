@@ -1,1 +1,78 @@
 @import "tailwindcss";
+
+@theme {
+  /* Colors */
+  --color-primary: #b5252e;
+  --color-secondary: #0e0e0f;
+  --color-bgYellow: #f9c241;
+  --color-blueGradient: linear-gradient(to bottom, #073e7a 0%, #0c71e0 100%);
+
+  
+  --gradient-dark: linear-gradient(to bottom, #1c1c1e, #0e0e0f);
+  --gradient-light: linear-gradient(to right, #01a826, #a4f58f);
+  --gradient-blue: linear-gradient(to bottom, #073e7a, #0c71e0);
+
+  /* breakpoints */
+  /* --breakpoint-3xl: 1920px; */
+  --breakpoint-s_phone: 319px;
+  --breakpoint-m_phone: 374px;
+  --breakpoint-phone: 429px;
+  --breakpoint-tablet: 767px;
+  --breakpoint-laptop: 1023px;
+  --breakpoint-desktop: 1439px;
+  --breakpoint-_4k: 1920px;
+
+  /* Font Sizes */
+  --text-h1: 4.5rem;
+  --text-h2: 3.25rem;
+  --text-h3: 3rem;
+  --text-h4: 1.875rem;
+  --text-p: 1.5rem;
+  --text-p-small: 1.125rem;
+
+  /* Border Radius */
+  --radius-primary: 1rem;
+  --radius-secondary: 1.5rem;
+
+}
+
+/* Define custom animations and utilities */
+@layer base {
+  body {
+    font-family: var(--font-poppins);
+  }
+}
+
+.hide-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  overflow-y: scroll;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+/* For the entire document */
+::-webkit-scrollbar {
+  width: 12px; /* vertical scrollbar width */
+  height: 12px; /* horizontal scrollbar height */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* track color */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #850c0c; /* thumb color */
+  border-radius: 6px; /* rounded corners */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b53232; /* thumb color on hover */
+}
+.gradient-text {
+  background: linear-gradient(180deg, #ffffff 9.72%, #2e44ba 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

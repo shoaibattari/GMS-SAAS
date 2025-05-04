@@ -22,7 +22,7 @@ const Hero = () => {
           visitor or an admin, access organized data in seconds.
         </p>
         <div className="flex items-center justify-between gap-6 py-6">
-          <Button onClick={()=> navigate("/user")} label={"User"} />
+          <Button onClick={()=> navigate("/guest")} label={"Guest"} />
           <Button onClick={()=> navigate("/login")} fill={true} label={"Admin"} />
         </div>
       </div>

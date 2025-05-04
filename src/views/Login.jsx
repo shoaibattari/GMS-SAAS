@@ -29,7 +29,7 @@ const Login = () => {
   return (
     <div className="flex items-center justify-center h-screen bg-secondary/40">
       <div className="bg-primary p-8 rounded shadow-md w-80">
-        <h2 className="text-2xl font-bold mb-6 text-center">Login</h2>
+        <h2 className="text-2xl font-bold mb-6 text-center text-white">Login</h2>
         <form onSubmit={handleSubmit(onSubmit)}>
           <Input
             label="Email"

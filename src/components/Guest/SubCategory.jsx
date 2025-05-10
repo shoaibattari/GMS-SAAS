@@ -32,13 +32,18 @@ const SubCategory = () => {
       const matchesKhundi = khundi ? grave.KHUNDI === khundi : true;
 
       return (
-        matchesSubCategory &&
-        matchesSearch &&
-        matchesGraveyard &&
-        matchesKhundi
+        matchesSubCategory && matchesSearch && matchesGraveyard && matchesKhundi
       );
     });
-  }, [subCategory, isGravePath, isKhundiPath, search, graveyard, khundi, graves]);
+  }, [
+    subCategory,
+    isGravePath,
+    isKhundiPath,
+    search,
+    graveyard,
+    khundi,
+    graves,
+  ]);
 
   return (
     <div
@@ -61,8 +66,8 @@ const SubCategory = () => {
 
       <div className="container mx-auto px-4 w-[80%]">
         <SearchBar
-          graveShow={isGravePath}
-          khundiShow={isKhundiPath}
+          graveShow={isKhundiPath}
+          khundiShow={isGravePath}
           search={search}
           setSearch={setSearch}
           graveyard={graveyard}
